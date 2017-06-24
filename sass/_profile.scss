@@ -1,0 +1,81 @@
+@mixin profile {
+  float: left;
+  text-align: left;
+}
+
+.profile {
+  @include profile;
+  width: 32%;
+  @include mq(md) {
+    width: 100%;
+    padding: 0 3%;
+  }
+}
+
+.profile--mid {
+  @include profile;
+  width: 36%;
+  padding: 0 2%;
+  @include mq(md) {
+    width: 100%;
+    padding: 0 3%;
+  }
+}
+
+.profile__title {
+  position: relative;
+  margin: 1.5rem 0 2.8rem;
+  padding: 0 0 1.2rem;
+  line-height: 1;
+  font: {
+    weight: 400;
+    size: 2.5rem;
+  }
+  text-align: center;
+  &::after {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background: $textBlk;
+    content: "";
+  }
+  @include mq(md) {
+    margin: 4.2rem 0 2.2rem;
+  }
+  &:first-child {
+    @include mq(md) {
+      margin: 3.5rem 0 2.2rem;
+    }
+  }
+}
+
+.profile__subtitle {
+  margin: 2.2rem 0 0.5rem;
+  font: {
+    size: 2rem;
+    weight: 400;
+  }
+}
+
+.profile__list {
+  margin: 0.5rem 0;
+  padding: 0 0 0 1.2rem;
+  list-style-type: none;
+  & > li {
+    line-height: 1.4;
+  }
+}
+
+.profile__list--ni {
+  margin: 0.5rem 0;
+  padding: 0;
+  list-style-type: none;
+  line-height: 1.4;
+}
+
+.profile__text {
+  margin: 0.5rem 0;
+  line-height: 1.4;
+}

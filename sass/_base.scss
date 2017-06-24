@@ -1,0 +1,77 @@
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  font: {
+    size: 62.5%;
+  }
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background: {
+    color: #fff;
+  }
+  color: $textBlk;
+  font: {
+    family: $fontSerif;
+    weight: 400;
+    size: 1.8rem;
+  }
+  line-height: 1.8;
+  @include mq(lg) {
+    background: url(image/back_alt.jpg) no-repeat center center;
+    background: {
+      size: cover;
+    }
+  }
+  &.is-subpage {
+    background: url(image/back_alt.jpg) no-repeat center center;
+    background: {
+      size: cover;
+      attachment: fixed;
+    }
+    @include mq(lg) {
+      padding-top: 48px;
+      background-image: none;
+    }
+  }
+}
+
+a {
+  color: $textBlk;
+  text-decoration: none;
+  transition: .3s;
+  img {
+    transition-duration: .3s;
+    transition-timing-function: cubic-bezier(.3, .1, .3, 1);
+    transition-property: all;
+  }
+  &:hover {
+    opacity: .5;
+    img {
+      opacity: .9;
+    }
+  }
+  &[target="_blank"]:after {
+    margin: 0 0 0 5px;
+    color: $gray;
+    font: {
+      family: FontAwesome;
+      size: 1.4rem;
+    }
+    line-height: 1;
+    content: "\f08e";
+  }
+}
+
+img {
+  vertical-align: bottom;
+}

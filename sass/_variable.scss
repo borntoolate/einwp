@@ -1,0 +1,39 @@
+// media query
+// ======================================================================
+$breakpoints: (
+  'sm': 'screen and (max-width: 767px)',
+  'smin': 'screen and (min-width: 768px)',
+  'md': 'screen and (max-width: 991px)',
+  'slg': 'screen and (max-width: 1199px)',
+  'lg': 'screen and (max-width: 1024px)',
+  'high': 'screen and (max-height: 479px)',
+) !default;
+
+@mixin mq($breakpoint: sm) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+// color
+// ======================================================================
+$textBlk: #181717;
+// link
+$gray: #808080;
+
+// font
+// ======================================================================
+$fontSerif: "Crimson Text", Garamond, "Times New Roman", "游明朝", "Yu Mincho", "游明朝体", YuMincho, "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "HiraMinProN-W3", "HGS明朝E", "ＭＳ Ｐ明朝", "MS PMincho", serif;
+
+// clear
+// ======================================================================
+@mixin clearfix{
+  &::after {
+    display: block;
+    clear: both;
+    content: "";
+  }
+}
+
+// other / utility
+// ======================================================================

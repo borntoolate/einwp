@@ -1,0 +1,56 @@
+.music {
+  float: left;
+  width: 33%;
+  margin: 0 0 .8rem 0;
+  @include mq(slg) {
+    width: 50%;
+    padding: 0;
+  }
+  @include mq() {
+    width: 100%;
+    padding: 0 3%;
+  }
+}
+
+.music--mid {
+  float: left;
+  width: 34%;
+  margin: 0 0 .8rem 0;
+  padding: 0 0.3%;
+  @include mq(slg) {
+    width: 50%;
+    padding: 0;
+  }
+  @include mq() {
+    width: 100%;
+    padding: 0 3%;
+  }
+}
+
+.music__item {
+  margin: 2.8rem 0 1.6rem;
+  @include mq(md) {
+    margin: 4.2rem 0 1rem;
+  }
+  img {
+    max-width: 300px;
+    width: 100%;
+    max-height: 300px;
+    height: auto;
+  }
+}
+
+.music__title {
+  margin: 1rem 0 .5rem;
+  font: {
+    weight: 400;
+    size: 2rem;
+  }
+  line-height: 1;
+}
+
+.music__text {
+  margin: .5rem 0;
+  padding: 0;
+  line-height: 1.4;
+}

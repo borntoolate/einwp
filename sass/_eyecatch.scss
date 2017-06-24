@@ -1,0 +1,68 @@
+.eyecatch {
+  height: 100%;
+  text-align: center;
+  border-top: 13px solid #fff;
+  border-top: 13px solid rgba(255, 255, 255, .9);
+  border-left: 56px solid #fff;
+  border-left: 56px solid rgba(255, 255, 255, .9);
+  @include mq(md) {
+    border-color: transparent;
+  }
+}
+
+.eyecatch__logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+  width: 100%;
+  margin: 0;
+  color: #fff;
+  font: {
+    weight: 400;
+    size: 6.4rem;
+  }
+  line-height: 1.2;
+  transform: translate(-50%, -50%);
+}
+
+.eyecatch__down {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin: 0 0 0 -56px;
+  padding: 28px 0;
+  a span {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 24px;
+    height: 24px;
+    margin-left: -12px;
+    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid rgba(255, 255, 255, .9);
+    border-left: 1px solid #fff;
+    border-left: 1px solid rgba(255, 255, 255, .9);
+    transform: rotate(-45deg);
+  }
+}
+
+.eyecatch__back {
+  z-index: -2;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  min-height: 801px;
+  height: auto;
+  background: url(image/back_alt.jpg) no-repeat center center;
+  background: {
+    size: cover;
+    attachment: fixed;
+  }
+  transform: translate(-50%, -50%);
+  @include mq(lg) {
+    display: none;
+  }
+}

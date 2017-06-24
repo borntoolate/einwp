@@ -1,0 +1,15 @@
+.footer {
+  padding: 90px 0 0;
+  text-align: center;
+  color: rgba(255, 255, 255, .9);
+  @include mq(lg) {
+    background: url(image/back_alt.jpg) no-repeat center bottom;
+    background: {
+      size: auto;
+    }
+  }
+}
+
+.copyright {
+  line-height: 5rem;
+}

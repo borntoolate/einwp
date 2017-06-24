@@ -1,0 +1,90 @@
+@mixin shows {
+  float: left;
+  text-align: left;
+}
+
+.shows {
+  @include shows;
+  width: 32%;
+  @include mq(md) {
+    width: 100%;
+    padding: 0 3%;
+  }
+}
+
+.shows__list {
+  list-style-type: none;
+}
+
+.shows--mid {
+  @include shows;
+  width: 36%;
+  padding: 0 2%;
+  @include mq(md) {
+    width: 100%;
+    padding: 0 3%;
+  }
+}
+
+.shows__title {
+  position: relative;
+  margin: 1.5rem 0 2.8rem;
+  padding: 0 0 1.2rem;
+  font: {
+    weight: 400;
+    size: 2.5rem;
+  }
+  line-height: 1;
+  text-align: center;
+  &::after {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background: $textBlk;
+    content: "";
+  }
+  @include mq(md) {
+    margin: 4.2rem 0 1rem;
+  }
+  &:first-child {
+    @include mq(md) {
+      margin: 3.5rem 0 1rem;
+    }
+  }
+}
+
+.shows__subtitle {
+  margin: 2.2rem 0 .5rem;
+  font: {
+    weight: 400;
+    size: 2rem;
+  }
+  line-height: 1;
+}
+
+@mixin showsText {
+  margin: 0.5rem 0;
+  padding: 0 0 0 1.2rem;
+}
+
+.shows__text {
+  @include showsText;
+  line-height: 1.4;
+}
+
+.shows__text2 {
+  margin: 2.5rem 0 0.5rem;
+  line-height: 1.4;
+  @include mq(md) {
+    margin: 2.2rem 0 0;
+  }
+}
+
+.shows__list {
+  @include showsText;
+  & > li {
+    line-height: 1.4;
+  }
+}
